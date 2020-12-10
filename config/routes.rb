@@ -8,7 +8,5 @@ Rails.application.routes.draw do
   end  
 
   #namespacing routes lets the browser know where to look for the controller within the backend of the application.
-  
-end
 
-fetch('http://localhost:3000/api/v1/transactions')
+end

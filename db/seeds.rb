@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+account = Account.create(name: 'Checking', balance: 1000)
+
+transaction_one = Transaction.create(account_id: 1, amount: 10, kind: 'deposit', date: Date.today, description: 'Pocket Money')
+
+transaction_two = Transaction.create(account_id: 1, amount: 10, kind: 'withdraw', date: Date.today, description: 'Spending Money')
