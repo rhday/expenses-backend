@@ -15,9 +15,13 @@ class API::V1::AccountsController < ApplicationController
     end 
 
     def show
+        @account = Account.find(params[:id])
+        render json: @account
     end 
 
     def destroy
+        @account = Account.find(params[:id])
+        @account.destroy
     end 
 
     private
