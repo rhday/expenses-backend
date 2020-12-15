@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  namespace :api do 
-    namespace :v1 do
+  namespace :api do ## This tells the application where to look "app/controllers/api/v1"
+    namespace :v1 do ## This tells the application where to look "app/controllers/api/v1"
       resources :transactions
       resources :accounts
     end 
