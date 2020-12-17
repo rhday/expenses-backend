@@ -1,4 +1,4 @@
-class API::V1::TransactionsController < ApplicationController
+class Api::V1::TransactionsController < ApplicationController
 
     before_action :set_account
     
@@ -29,7 +29,7 @@ class API::V1::TransactionsController < ApplicationController
     private
 
     def set_account
-        @account Account.find(params[:account_id])
+        @account = Account.find(params[:account_id])
     end 
 
     def transaction_params
