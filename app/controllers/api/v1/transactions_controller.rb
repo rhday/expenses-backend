@@ -3,8 +3,8 @@ class Api::V1::TransactionsController < ApplicationController
     before_action :set_account
     
     def index
-       @transactions = @account.transactions
-       render json: @transactions
+        @transactions = @account.transactions 
+        render json: @transactions
     end 
 
     def create
@@ -22,9 +22,10 @@ class Api::V1::TransactionsController < ApplicationController
         render json: @transaction 
     end 
 
-    #def destroy
-       
-    #end 
+    def destroy
+       transaction = Transaction.find(params[:id])
+       transaction.destroy
+    end 
 
     private
 
