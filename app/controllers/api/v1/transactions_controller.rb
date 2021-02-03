@@ -13,7 +13,7 @@ class Api::V1::TransactionsController < ApplicationController
             @transaction.save
             render json: @transaction
         else
-            render json: {error: 'Balance too low.'}
+            render json: {error: 'Balance too low.'} #error message not appearing
         end
     end 
 
